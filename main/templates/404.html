@@ -1,0 +1,11 @@
+{% extends "main/detail.html" %}
+{% load static %}
+{% block title %}
+    404 -
+{% endblock title %}
+{% block detail_title %}
+    404
+{% endblock detail_title %}
+{% block detail_subtitle %}
+    that page doesn't exist. <a href="{% url 'main:home' %}">Return home</a>
+{% endblock detail_subtitle %}

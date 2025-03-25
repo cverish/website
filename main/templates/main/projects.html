@@ -1,0 +1,132 @@
+{% extends "main/detail.html" %}
+{% load static %}
+{% block title %}
+    Projects -
+{% endblock title %}
+{% block detail_title %}
+    Projects
+{% endblock detail_title %}
+{% block detail_subtitle %}
+    a selection of projects I've done in my spare time
+{% endblock detail_subtitle %}
+{% block detail_content %}
+    <div class="mt-12">
+        <div class="two-col">
+            <div>
+                <div>campsites</div>
+                <div class="sep"></div>
+                <div class="right">explore public campsites across the US and Canada</div>
+            </div>
+        </div>
+        <div class="mt-2 text-xs text-accent">PostgreSQL, SQLAlchemy, FastAPI, React/Typescript, Docker</div>
+        <div class="flex gap-12 mt-4 text-sm text-medium">
+            <a href="https://campsites.veri.sh/"
+               rel="noreferrer"
+               class="flex gap-1 items-center">
+                {% include "main/icons/icon-globe.html" with size_classes="h-[14px] w-[14px]  mt-[2px]" stroke_class="stroke-action" %}
+                <div>application</div>
+            </a>
+            <a href="https://github.com/cverish/campsites-app"
+               rel="noreferrer"
+               class="flex gap-1 items-center">
+                {% include "main/icons/icon-github.html" with size_classes="h-3 w-3 mt-[2px]" fill_class="fill-action" %}
+                <div>github</div>
+            </a>
+        </div>
+        <div class="mt-4 space-y-2 text-sm text-body2">
+            <p>
+                I found a dataset of 13,000+ free campsites on
+                <a href="https://uscampgrounds.info/" rel="noreferrer" class="subtle">USCampgrounds.info</a>
+                (major thanks to Tom Hillegass, the site owner) and decided to build an application that allows
+                users to filter campsites and explore on a map.
+            </p>
+            <p>
+                Currently, the application consists of a PostgreSQL database (with a sqlalchemy ORM), a REST API using the python
+                library FastAPI that allows for server-side filtering/sorting/pagination, and a React/TypeScript frontend with a
+                filterable list view.
+            </p>
+            <p>
+                I've completed some really cool work on adding a Places functionality to the application, though it is not
+                viewable in production (you can see the branch
+                <a href="https://github.com/cverish/campsites-app/tree/postgis"
+                   rel="noreferrer"
+                   class="subtle">here</a>. If you would like the geographical names data, contact me.)
+                I downloaded all of the geographical names data for the US and Canada (which is an unbelievable amount of data) and filtered it down to
+                major places of interest, such as lakes and mountains. I then added PostGIS to the database and updated the campsites data
+                to include a new Point column with its coordinates. The backend for this works locally! Eventually, users will be able to search
+                for geographical places and view the closest campsites; this will also allow me to do some clever map clustering.
+            </p>
+        </div>
+    </div>
+    <div class="mt-12">
+        <div class="two-col">
+            <div>
+                <div>food web simulator</div>
+                <div class="sep"></div>
+                <div class="right">simulating relationships between organisms in a food web</div>
+            </div>
+        </div>
+        <div class="mt-2 text-xs text-accent">React/JS</div>
+        <div class="flex gap-12 mt-4 text-sm text-medium">
+            <a href="https://foodweb.veri.sh/simulator"
+               rel="noreferrer"
+               class="flex gap-1 items-center">
+                {% include "main/icons/icon-globe.html" with size_classes="h-[14px] w-[14px]  mt-[2px]" stroke_class="stroke-action" %}
+                <div>application</div>
+            </a>
+            <a href="https://github.com/cverish/food-web-simulator"
+               rel="noreferrer"
+               class="flex gap-1 items-center">
+                {% include "main/icons/icon-github.html" with size_classes="h-3 w-3 mt-[2px]" fill_class="fill-action" %}
+                <div>github</div>
+            </a>
+        </div>
+        <div class="mt-4 space-y-2 text-sm text-body2">
+            <p>
+                Developed by request in October 2021. A middle school science teacher needed a replacement for a Flash app she had used to
+                simulate predator-prey relationships in ecosystems. She wanted a website that would have two dropdowns, one showing predators
+                and another showing prey, and feedback about the choice.
+            </p>
+            <p>
+                I would say this project is most interesting for its management and validation of JSON stored locally, as well as upload and
+                download capabilities. I also wanted to practice using Material UI v5 as I've only worked with v4. On the shortlist of
+                feature-adds is a user interface for adding data (instead of forcing the user to work directly with JSON). I would like to
+                add a simple backend to this eventually.
+            </p>
+        </div>
+    </div>
+    <div class="mt-12">
+        <div class="two-col">
+            <div>
+                <div>m5stack hangman</div>
+                <div class="sep"></div>
+                <div class="right">a game of hangman on the m5stack faces keyboard module</div>
+            </div>
+        </div>
+        <div class="mt-2 text-xs text-accent">C++/Arduino, M5Stack (ESP32)</div>
+        <div class="flex gap-12 mt-4 text-sm text-medium">
+            <a href="https://github.com/cverish/M5Stack-hangman"
+               rel="noreferrer"
+               class="flex gap-1 items-center">
+                {% include "main/icons/icon-github.html" with size_classes="h-3 w-3 mt-[2px]" fill_class="fill-action" %}
+                <div>github</div>
+            </a>
+        </div>
+        <div class="mt-4 space-y-2 text-sm text-body2">
+            <p>
+                I received an M5Stack as a gift and wanted to find a nice project that would combine the Faces modules, button presses,
+                using the SD card, and drawing graphics on the screen. I decided to implement a hangman game that would pull from a
+                list of random words and show feedback on which letters had been correct and incorrect, as well as show a hangman which
+                slowly fills up as the player guesses incorrect letters.
+            </p>
+            <p>
+                I used this as an opportunity to practice splitting a one-file monster into multiple, organized files. I'd worked with
+                Arduino extensively in the HCI lab but had only ever put my programs into a single file (and for CRISPEE that file
+                was very, very, very long). This seemed like a good chance to think about splitting the project into three logical
+                chunks - the business logic, the graphics, and the SD card reader. Code exists for a version that uses the
+                Merriam-Webster API to fetch the definition of the secret word, as a hint for the player, but this was not
+                completed to the point of being ready for publication.
+            </p>
+        </div>
+    </div>
+{% endblock detail_content %}

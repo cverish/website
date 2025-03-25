@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content="full-stack software developer">
+        <meta name="keywords" content="Clarissa Verish">
+        <meta name="author" content="Clarissa Verish">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            {% block title %}
+            {% endblock title %}
+        Clarissa Verish</title>
+        <link rel="apple-touch-icon"
+              sizes="180x180"
+              href="{% static 'favicons/apple-touch-icon.png' %}">
+        <link rel="icon"
+              type="image/png"
+              sizes="32x32"
+              href="{% static 'favicons/favicon-32x32.png' %}">
+        <link rel="icon"
+              type="image/png"
+              sizes="16x16"
+              href="{% static 'favicons/favicon-16x16.png' %}">
+        <link rel="stylesheet" href="{% static 'css/output.css' %}" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+              rel="stylesheet">
+    </head>
+    <body class="h-screen bg-bgprimary">
+        <section class="container flex flex-col items-center px-5 pt-20 pb-5 mx-auto max-w-2xl min-h-full min-w-2xl text-body">
+            <div class="w-full text-left">
+                {% block header %}
+                    <a href="{% url 'main:home' %}"
+                       class="flex gap-1 items-center text-sm w-fit">
+                        <div class="mt-1">
+                            {% include "main/icons/icon-return.html" with size_classes="h-3 w-3" fill_class="fill-action" %}
+                        </div>
+                        <div>return home</div>
+                    </a>
+                {% endblock header %}
+            </div>
+            <div class="w-full grow">
+                {% block content %}
+                {% endblock content %}
+            </div>
+            <div class="mt-20 text-xs text-accent">© Clarissa Verish 2025</div>
+        </section>
+    </body>
+</html>

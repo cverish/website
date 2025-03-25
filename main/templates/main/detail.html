@@ -1,0 +1,15 @@
+{% extends "main/base.html" %}
+{% block content %}
+    <h1 class="mt-8 text-body">
+        {% block detail_title %}
+        {% endblock detail_title %}
+    </h1>
+    <div class="mt-2 text-accent">
+        {% block detail_subtitle %}
+        {% endblock detail_subtitle %}
+    </div>
+    <div class="mt-8 w-full">
+        {% block detail_content %}
+        {% endblock detail_content %}
+    </div>
+{% endblock content %}

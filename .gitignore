@@ -1,0 +1,13 @@
+node_modules/
+.venv/
+db*
+.ruff_cache/
+*/__pycache__/
+
+.env
+build/
+static/pdfs
+static/admin
+static/css/output.css
+
+.DS_STORE

@@ -1,0 +1,85 @@
+{% extends "main/detail.html" %}
+{% load static %}
+{% block title %}
+    About -
+{% endblock title %}
+{% block detail_title %}
+    About Me
+{% endblock detail_title %}
+{% block detail_subtitle %}
+    full-stack software developer with a background in academic research, teaching, and chemistry
+{% endblock detail_subtitle %}
+{% block detail_content %}
+    <div>
+        <div class="section-header">links</div>
+        <div class="flex gap-12 text-sm text-medium">
+            <a href="https://github.com/cverish"
+               rel="noreferrer"
+               class="flex gap-1 items-center">
+                {% include "main/icons/icon-github.html" with size_classes="h-3 w-3" fill_class="fill-action" %}
+                <div>github</div>
+            </a>
+            <a href="https://www.linkedin.com/in/clarissa-verish/"
+               rel="noreferrer"
+               class="flex gap-1 items-center">
+                {% include "main/icons/icon-linkedin.html" with size_classes="h-3 w-3" fill_class="fill-action" %}
+                <div>linkedin</div>
+            </a>
+            <a href="mailto:{{ contact_mailto }}"
+               rel="noreferrer"
+               class="flex gap-1 items-center">
+                {% include "main/icons/icon-email.html" with size_classes="h-[14px] w-[14px]" fill_class="fill-action" %}
+                <div>Email</div>
+            </a>
+        </div>
+    </div>
+    <div>
+        <div class="section-header">skills</div>
+        <ul>
+            <li>
+                <em class="not-italic underline text-body text-bold">Frameworks:</em> Django Full-Stack (advanced), React (advanced), FastAPI (very proficient), SQLAlchemy (very proficient), NextJS (proficient)
+            </li>
+            <li>
+                <em class="not-italic underline text-body text-bold">Languages:</em> Python (advanced), TypeScript (advanced), JavaScript (advanced), HTML/CSS (advanced), Java (out of practice)
+            </li>
+            <li>
+                <em class="not-italic underline text-body text-bold">Other technologies:</em> LLMs (OpenAI, Gemini), cloud providers (GCP, AWS), Docker, Nix
+            </li>
+            <li>
+                <em class="not-italic underline text-body text-bold">Engineering practices:</em> Agile, software design, database design, robust test suites, mentorship, collaborative problem solving, code review
+            </li>
+            <li>
+                <em class="not-italic underline text-body text-bold">User experience:</em> wireframe mocks, user-led iterative design, user testing, user interviews
+            </li>
+        </ul>
+    </div>
+    <div>
+        <div class="section-header">hobbies</div>
+        <ul>
+            <li>sewing, especially myog-style projects</li>
+            <li>camping, ask me how to set up a tarp and I'll talk your ear off</li>
+            <li>currently working on folding 1000 paper cranes (as of mid-March 2025, I'm at 700 complete)</li>
+            <li>arduino projects when the inspiration strikes me</li>
+            <li>
+                other various crafts and projects, my most recent being papier-maché eyeball helmets (à la
+                <nobr><a href="https://en.wikipedia.org/wiki/The_Residents"
+   rel="noreferrer"
+   class="subtle">The Residents</a></nobr>).
+                I recently got my hands on some retired payphone parts, which I plan to make into... something. Check back later.
+            </li>
+        </ul>
+    </div>
+    <div>
+        <div class="section-header">administrivia</div>
+        <ul>
+            <li>most excited about working for early-stage startups</li>
+            <li>happiest when I am doing true full-stack work - I don't want to be siloed</li>
+            <li>currently located in Sherbrooke, Quebec (mon français n'est pas parfait, mais j'apprends !)</li>
+            <li>authorized to work in the US and Canada</li>
+            <li>
+                open to working remotely for Canadian companies (full-time) or American companies
+                (full-time via an employer of record preferably, or as a contractor for the right opportunity)
+            </li>
+        </ul>
+    </div>
+{% endblock detail_content %}
