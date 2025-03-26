@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  /* font size on small screens */
+  font-size: 18px;
+  /* font size on larger screens */
+  @screen sm {
+    font-size: 16px;
+  }
+}
+
 a {
   @apply text-action font-medium border-b-[0.5px] border-transparent hover:border-b-action;
 
@@ -58,7 +67,11 @@ ul {
     }
 
     > .right {
-      @apply grow-0 font-light text-accent sm:text-right;
+      @apply grow-0 font-light text-body2 sm:text-right;
     }
   }
+}
+
+.item-description {
+  @apply mt-2 px-4 py-2 space-y-3 text-sm text-body2 border-l-[1px] border-l-bgsecondary;
 }

@@ -9,5 +9,6 @@ build/
 static/pdfs
 static/admin
 static/css/output.css
+local/
 
 .DS_STORE

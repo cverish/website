@@ -14,6 +14,6 @@ Requires python and npm to be installed.
 - formatting: `make format` and lint check: `make lint`
 
 ## build it
-- add views to be statically baked to `settings.py` >> `BAKERY_VIEWS` (they must be class-based views which inherit from `django-bakery` views, separate from your django class-based views)
+- add views to be statically baked to `settings.py` >> `BAKERY_VIEWS`. They must be class-based views which inherit from `django-bakery` views. The `django-bakery` views inherit from generic django class-based views, so you don't need to duplicate the classes (at least for my use case)
 - update `BUILD_DIR` in your `.env`. Defaults to `<PROJECT_ROOT>/build` in `settings.py`. This will also collect all of your static files in the build folder.
 - to bake into static html, run `make bake`.

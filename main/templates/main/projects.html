@@ -19,10 +19,11 @@
             </div>
         </div>
         <div class="mt-2 text-xs text-accent">PostgreSQL, SQLAlchemy, FastAPI, React/Typescript, Docker</div>
+        <div class="mt-2 text-xs text-action">
+            NOTE 2025-03-25: updating my VPS borked the API, and I won't have the bandwidth to fix it until mid-April
+        </div>
         <div class="flex gap-12 mt-4 text-sm text-medium">
-            <a href="https://campsites.veri.sh/"
-               rel="noreferrer"
-               class="flex gap-1 items-center">
+            <a href="https://campsites.veri.sh/" class="flex gap-1 items-center">
                 {% include "main/icons/icon-globe.html" with size_classes="h-[14px] w-[14px]  mt-[2px]" stroke_class="stroke-action" %}
                 <div>application</div>
             </a>
@@ -43,14 +44,14 @@
             <p>
                 Currently, the application consists of a PostgreSQL database (with a sqlalchemy ORM), a REST API using the python
                 library FastAPI that allows for server-side filtering/sorting/pagination, and a React/TypeScript frontend with a
-                filterable list view.
+                filterable list view. The repo contains a Docker setup for running the database, API, and frontend locally.
             </p>
             <p>
                 I've completed some really cool work on adding a Places functionality to the application, though it is not
                 viewable in production (you can see the branch
                 <a href="https://github.com/cverish/campsites-app/tree/postgis"
                    rel="noreferrer"
-                   class="subtle">here</a>. If you would like the geographical names data, contact me.)
+                   class="subtle">here</a>. If you would like the geographical names data, contact me).
                 I downloaded all of the geographical names data for the US and Canada (which is an unbelievable amount of data) and filtered it down to
                 major places of interest, such as lakes and mountains. I then added PostGIS to the database and updated the campsites data
                 to include a new Point column with its coordinates. The backend for this works locally! Eventually, users will be able to search
@@ -69,7 +70,6 @@
         <div class="mt-2 text-xs text-accent">React/JS</div>
         <div class="flex gap-12 mt-4 text-sm text-medium">
             <a href="https://foodweb.veri.sh/simulator"
-               rel="noreferrer"
                class="flex gap-1 items-center">
                 {% include "main/icons/icon-globe.html" with size_classes="h-[14px] w-[14px]  mt-[2px]" stroke_class="stroke-action" %}
                 <div>application</div>

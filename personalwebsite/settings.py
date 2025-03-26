@@ -99,12 +99,12 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # django bakery things
 BUILD_DIR = os.getenv("BUILD_DIR", str(BASE_DIR / "build") + "/")
 BAKERY_VIEWS = (
-    "main.views.StaticHomeView",
-    "main.views.StaticAboutView",
-    "main.views.StaticWorkView",
-    "main.views.StaticResearchView",
-    "main.views.StaticProjectsView",
-    "main.views.Static404View",
+    "main.views.HomeView",
+    "main.views.AboutView",
+    "main.views.WorkView",
+    "main.views.ResearchView",
+    "main.views.ProjectsView",
+    "main.views.Custom404View",
 )
 ALLOW_BAKERY_AUTO_PUBLISHING = False
 

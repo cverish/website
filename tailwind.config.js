@@ -6,9 +6,9 @@ module.exports = {
     colors: {
       bgprimary: "#12170e",
       bgsecondary: "#1D3416",
-      action: "#84B12B",
-      body: "#F0F3F4",
-      body2: "#C5D2CB",
+      action: "#90c623",
+      body: "#f3f6f8",
+      body2: "#d8e6df",
       accent: "#99b0a2",
       transparent: "transparent",
       inherit: "inherit",
