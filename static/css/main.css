@@ -28,6 +28,10 @@ ul {
   }
 }
 
+p {
+  @apply leading-6;
+}
+
 .section-header {
   @apply w-full uppercase text-xs font-medium text-accent flex justify-between mb-2 mt-12;
 }
@@ -70,8 +74,4 @@ ul {
       @apply grow-0 font-light text-body2 sm:text-right;
     }
   }
-}
-
-.item-description {
-  @apply mt-2 px-4 py-2 space-y-3 text-sm text-body2 border-l-[1px] border-l-bgsecondary;
 }
