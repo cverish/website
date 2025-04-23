@@ -19,16 +19,12 @@
             </div>
         </div>
         <div class="mt-2 text-xs text-accent">PostgreSQL, SQLAlchemy, FastAPI, React/Typescript, Docker</div>
-        <div class="mt-2 text-xs text-action">
-            NOTE 2025-03-25: updating my VPS borked the API, and I won't have the bandwidth to fix it until mid-April
-        </div>
         <div class="flex gap-12 mt-4 text-sm text-medium">
             <a href="https://campsites.veri.sh/" class="flex items-center gap-[6px]">
                 {% include "main/icons/icon-globe.html" with size_classes="h-[14px] w-[14px] mt-[2px]" stroke_class="stroke-action" %}
                 <div>application</div>
             </a>
             <a href="https://github.com/cverish/campsites-app"
-               rel="noreferrer"
                class="flex gap-2 items-center">
                 {% include "main/icons/icon-github.html" with size_classes="h-3 w-3 mt-[1px]" fill_class="fill-action" %}
                 <div>github</div>
@@ -47,15 +43,13 @@
                 filterable list view. The repo contains a Docker setup for running the database, API, and frontend locally.
             </p>
             <p>
-                I've completed some really cool work on adding a Places functionality to the application, though it is not
-                viewable in production (you can see the branch
-                <a href="https://github.com/cverish/campsites-app/tree/postgis"
-                   rel="noreferrer"
-                   class="subtle">here</a>. If you would like the geographical names data, contact me).
+                I've completed some really cool work on adding a Places functionality to the application. It's currently not included
+                in the frontend, but can be accessed directly in the API <a href="https://api.veri.sh/docs" class="subtle">here</a>.
                 I downloaded all of the geographical names data for the US and Canada (which is an unbelievable amount of data) and filtered it down to
-                major places of interest, such as lakes and mountains. I then added PostGIS to the database and updated the campsites data
-                to include a new Point column with its coordinates. The backend for this works locally! Eventually, users will be able to search
-                for geographical places and view the closest campsites; this will also allow me to do some clever map clustering.
+                major places of interest, such as cities, lakes, and mountains. I then added PostGIS to the database and updated the campsites data
+                to include a new Point column with its coordinates. The Places API supports search by string or location as well as search by
+                distance from another point. The Campsites API also supports searching by proximity to a given point. This will support a more
+                intuitive search functionality for finding campsites as well as the ability to plot and cluster campsites on a map.
             </p>
         </div>
     </div>
@@ -75,7 +69,6 @@
                 <div>application</div>
             </a>
             <a href="https://github.com/cverish/food-web-simulator"
-               rel="noreferrer"
                class="flex gap-2 items-center">
                 {% include "main/icons/icon-github.html" with size_classes="h-3 w-3 mt-[1px]" fill_class="fill-action" %}
                 <div>github</div>
@@ -106,7 +99,6 @@
         <div class="mt-2 text-xs text-accent">C++/Arduino, M5Stack (ESP32)</div>
         <div class="flex gap-12 mt-4 text-sm text-medium">
             <a href="https://github.com/cverish/M5Stack-hangman"
-               rel="noreferrer"
                class="flex gap-2 items-center">
                 {% include "main/icons/icon-github.html" with size_classes="h-3 w-3 mt-[1px]" fill_class="fill-action" %}
                 <div>github</div>
