@@ -7,37 +7,43 @@
     Work Experience
 {% endblock detail_title %}
 {% block detail_subtitle %}
-    want to hire me? <a href="{% static 'pdfs/Clarissa_Verish_resume.pdf' %}">download the pdf</a>
+    want to hire me? <a href="{% static 'pdfs/Clarissa_Verish_resume.pdf' %}" class="normal">download the pdf</a>
 {% endblock detail_subtitle %}
 {% block detail_content %}
     <div class="space-y-8">
-        <div class="cv-item">
+        <div class="cv-item" id="flux">
             <div class="cv-item--title">
                 <div class="left">
-                    senior full-stack software engineer · <a href="https://www.askflux.ai/" rel="noreferrer">Flux</a>
+                    senior full-stack software engineer · 
+                    <a href="https://www.askflux.ai/" class="normal" rel="noreferrer">Flux</a>
                 </div>
                 <div class="sep"></div>
                 <div class="right">2023-09 – present</div>
             </div>
             <ul>
                 <li>
-                    Worked from the ground up on our platform code, with contributions in every aspect of the codebase, including front-end, back-end, database design, data processing and transformation, interfacing with multiple LLMs, and internal tooling.
+                    Worked from the ground up on our platform code, with contributions in every aspect of the codebase,
+                    including front-end, back-end, database design, data processing and transformation,
+                    interfacing with multiple LLMs, and internal tooling.
                 </li>
                 <li>
-                    Refactored a large portion of our main evaluation process into an elegant state-machine solution, simplifying the code structure and centralizing progress-tracking and logging in one place.
+                    Refactored a large portion of our main evaluation process into an elegant state-machine solution,
+                    simplifying the code structure and centralizing progress-tracking and logging in one place.
                 </li>
                 <li>Focused heavily on writing code that could be easily tested and was accompanied by robust test suites.</li>
                 <li>Productionalized data science code with an eye for clarity, efficiency, and extensibility.</li>
                 <li>Ideated with product, design, and leadership teams on new features and future product directions.</li>
                 <li>
-                    Championed cross-functional team collaboration efforts, including daily office hours for engineering and data science.
+                    Championed cross-functional team collaboration efforts,
+                    including daily office hours for engineering and data science.
                 </li>
             </ul>
         </div>
-        <div class="cv-item">
+        <div class="cv-item" id="manifold">
             <div class="cv-item--title">
                 <div class="left">
-                    senior software engineer · <a href="https://www.manifold.ai/" rel="noreferrer">Manifold</a>
+                    senior software engineer · 
+                    <a href="https://www.manifold.ai/" class="normal" rel="noreferrer">Manifold</a>
                 </div>
                 <div class="sep"></div>
                 <div class="right">2022-08 – 2023-09</div>
@@ -49,28 +55,36 @@
             </div>
             <ul>
                 <li>
-                    Developed full-stack web applications for clients across a wide range of industries (incl. enterprise networking hardware sales, genomic research, medical documentation harmonization, and pharmaceutical patient outreach).
+                    Developed full-stack web applications for clients across a wide range of industries
+                    (incl. enterprise networking hardware sales, genomic research,
+                    medical documentation harmonization, and pharmaceutical patient outreach).
                 </li>
                 <li>
-                    Onboarded rapidly onto existing and green-field codebases with varying programming languages, coding patterns, repository structures, and infrastructures.
+                    Onboarded rapidly onto existing and green-field codebases with varying programming languages,
+                    coding patterns, repository structures, and infrastructures.
                 </li>
                 <li>
-                    Collaborated with product, design, and key stakeholders to balance client needs with realistic outcomes, discuss project scope and trade-offs, and hand off projects at the end of engagements.
+                    Collaborated with product, design, and key stakeholders to balance client needs with realistic outcomes,
+                    discuss project scope and trade-offs, and hand off projects at the end of engagements.
                 </li>
                 <li>
-                    Served on the security committee, developed and conducted security/PHI training for new employees, created targeted internal phishing campaigns for training purposes.
+                    Served on the security committee, developed and conducted security/PHI training for new employees,
+                    created targeted internal phishing campaigns for training purposes.
                 </li>
                 <li>
-                    Participated in hiring processes: phone screenings, take-home project review and discussion, meet-the-team panels.
+                    Participated in hiring processes: phone screenings, take-home project review and discussion,
+                    meet-the-team panels.
                 </li>
                 <li>Mentored junior software engineers.</li>
             </ul>
         </div>
-        <div class="cv-item">
+        <div class="cv-item" id="hci-lab">
             <div class="cv-item--title">
                 <div class="left">
                     post-bac researcher ·
-                    <a href="https://cs.wellesley.edu/~hcilab/" rel="noreferrer">Wellesley College HCI Lab</a>
+                    <a href="https://cs.wellesley.edu/~hcilab/"
+                       class="normal"
+                       rel="noreferrer">Wellesley College HCI Lab</a>
                 </div>
                 <div class="sep"></div>
                 <div class="right">2017-01 – 2019-07</div>
@@ -80,27 +94,32 @@
                 <li>Managed and executed multiple large-scale, multi-year, cross-institution research projects.</li>
                 <li>Designed software and hardware prototypes using a variety of methods.</li>
                 <li>
-                    Created novel visualizations for user experience research, academic papers, grant proposals, presentations, and textbooks.
+                    Created novel visualizations for user experience research, academic papers, grant proposals,
+                    presentations, and textbooks.
                 </li>
                 <li>
-                    Designed and conducted research studies that included in-person and online data collection methods, analyzed data, published academic papers, and presented research at conferences.
+                    Designed and conducted research studies that included in-person and online data collection methods,
+                    analyzed data, published academic papers, and presented research at conferences.
                 </li>
             </ul>
         </div>
-        <div class="cv-item">
+        <div class="cv-item" id="dana-hall">
             <div class="cv-item--title">
                 <div class="left">
-                    computer science teacher · <a href="https://www.danahall.org/" rel="noreferrer">Dana Hall School</a>
+                    computer science teacher · 
+                    <a href="https://www.danahall.org/" class="normal" rel="noreferrer">Dana Hall School</a>
                 </div>
                 <div class="sep"></div>
-                <div class="right">2018-08 – 2019-06</div>
+                <div class="right">2018-10 – 2019-06</div>
             </div>
             <ul>
                 <li>
-                    Designed a project-based curriculum for high schoolers focusing on problem-solving techniques and basic coding skills.
+                    Designed a project-based curriculum for high schoolers focusing on problem-solving techniques and
+                    basic coding skills.
                 </li>
                 <li>
-                    Introduced concepts related to computer ethics, project creation from ideation to implementation, and multidisciplinary applications of computer science.
+                    Introduced concepts related to computer ethics, project creation from ideation to implementation,
+                    and multidisciplinary applications of computer science.
                 </li>
                 <li>Created labs to teach HTML/CSS/JavaScript, Python, and Arduino prototyping.</li>
                 <li>Taught a combined lab-lecture class of nine high-school aged students.</li>
@@ -110,18 +129,25 @@
             <div class="cv-item--title">
                 <div class="left">
                     student researcher ·
-                    <a href="https://cs.wellesley.edu/~hcilab/" rel="noreferrer">Wellesley College HCI Lab</a>
+                    <a href="https://cs.wellesley.edu/~hcilab/"
+                       class="normal"
+                       rel="noreferrer">Wellesley College HCI Lab</a>
                 </div>
                 <div class="sep"></div>
                 <div class="right">2016-05 – 2016-12</div>
             </div>
             <ul>
-                <li>Created novel interactive genomic visualizations for use by non-experts using the d3 JavaScript library.</li>
                 <li>
-                    Conducted in-person and online user testing to collect user experience metrics, comprehension of the information presented by the tool, and subjective user experience and satisfaction.
+                    Created novel interactive genomic visualizations for use by non-experts
+                    using the d3 JavaScript library.
                 </li>
                 <li>
-                    Created Python scripts that analyzed user experience metrics and survey scores to understand patterns of use and compare the effectiveness of different visualizations
+                    Conducted in-person and online user testing to collect user experience metrics,
+                    comprehension of the information presented by the tool, and subjective user experience and satisfaction.
+                </li>
+                <li>
+                    Created Python scripts that analyzed user experience metrics and survey scores
+                    to understand patterns of use and compare the effectiveness of different visualizations.
                 </li>
             </ul>
         </div>
@@ -130,6 +156,7 @@
                 <div class="left">
                     student researcher ·
                     <a href="https://www1.wellesley.edu/chemistry/facultystaff/arumainayagam/research"
+                       class="normal"
                        rel="noreferrer">Wellesley College Astrochemistry Lab</a>
                 </div>
                 <div class="sep"></div>
@@ -150,25 +177,31 @@
                 <div class="right">2009 – 2020</div>
             </div>
             <div class="mt-2 text-xs italic text-accent">
-                I've been working since early high school, and while many of these jobs are not relevant to a professional CV, it's work that I'm proud of and that I'd like to highlight.
+                I've been working since early high school, and while many of these jobs are not relevant to a professional CV,
+                it's work that I'm proud of and that I'd like to highlight.
             </div>
             <ul>
                 <li>
-                    Preparation of lecture notes, scientific diagrams, and chemistry lab demo videos for various chemistry courses at Wellesley College.
+                    Preparation of lecture notes, scientific diagrams, and chemistry lab demo videos
+                    for various chemistry courses at Wellesley College.
                 </li>
                 <li>
-                    Lab instructor and teacher's assistant for various computer science classes at Wellesley College during my time as a post-bac researcher.
+                    Lab instructor and teacher's assistant for various computer science classes at Wellesley College
+                    during my time as a post-bac researcher.
                 </li>
                 <li>Production of animated ESL educational videos.</li>
                 <li>
-                    Teaching after-school programs for web development, python, and robotics (the latter using the
+                    Teaching after-school programs for web development, python, and robotics
+                    (the latter using the
                     <a href="https://robotinacan.com/en/index.html"
                        rel="noreferrer"
                        class="subtle">Robot in a Can</a>
                     development kit).
                 </li>
                 <li>
-                    Tutoring throughout high school, college, and beyond via Kumon Learning Center, various tutor placement companies, and privately. Subjects included math, reading, chemistry, computer science, and SAT prep.
+                    Tutoring throughout high school, college, and beyond via Kumon Learning Center, 
+                    various tutor placement companies, and privately. 
+                    Subjects included math, reading, chemistry, computer science, and SAT prep.
                 </li>
                 <li>Teaching swim lessons to children ages 4-12.</li>
                 <li>A brief stint in the Whole Foods cheese department.</li>

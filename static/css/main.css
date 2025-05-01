@@ -12,10 +12,12 @@ html {
 }
 
 a {
-  @apply text-action font-medium border-b-[0.5px] border-transparent hover:border-b-action;
+  &.normal {
+    @apply text-action font-medium border-b-[0.5px] border-transparent hover:border-b-action;
+  }
 
   &.subtle {
-    @apply text-accent font-normal border-accent border-dashed hover:text-action hover:border-b-action;
+    @apply text-accent font-normal border-accent border-b-[0.5px] border-dashed hover:text-action hover:border-b-action;
   }
 }
 
@@ -74,4 +76,8 @@ p {
       @apply grow-0 font-light text-body2 sm:text-right;
     }
   }
+}
+
+.explanation {
+  @apply mt-4 space-y-3 text-sm text-body2 mr-4;
 }

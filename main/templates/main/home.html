@@ -7,9 +7,9 @@
     <div class="mt-8 w-full text-left">
         <h2 class="font-thin text-body2">resourceful, adaptable, collaborative, user-obsessed, wearer of many hats</h2>
         <div class="flex justify-between mt-2 text-medium">
-            <a href="{% url 'main:about' %}" class="flex items-center">
+            <a href="{% url 'main:about' %}" class="flex items-center normal">
                 <div>more about me</div>
-                {% include "main/icons/icon-arrow-up-right.html" with size_classes="h-5 w-5" fill_class="fill-action" %}
+                {% include "main/icons/icon-arrow-up-right.html" with size_classes="h-5 w-5 mt-[2px]" fill_class="fill-action" %}
             </a>
         </div>
     </div>
@@ -21,28 +21,31 @@
         <div class="two-col">
             <div>
                 <div class="left">
-                    senior full-stack software engineer · <a href="https://www.askflux.ai/" rel="noreferrer" class="subtle">Flux</a>
+                    <a href="{% url 'main:work' %}#flux">senior full-stack software engineer</a> · 
+                    <a href="https://www.askflux.ai/" rel="noreferrer" class="subtle">Flux</a>
                 </div>
                 <div class="sep"></div>
                 <div class="right">2023-09 – present</div>
             </div>
             <div>
                 <div class="left">
-                    senior software engineer · <a href="https://www.manifold.ai/" rel="noreferrer" class="subtle">Manifold</a>
+                    <a href="{% url 'main:work' %}#manifold">senior software engineer</a> · 
+                    <a href="https://www.manifold.ai/" rel="noreferrer" class="subtle">Manifold</a>
                 </div>
                 <div class="sep"></div>
                 <div class="right">2022-08 – 2023-09</div>
             </div>
             <div>
                 <div class="left">
-                    software engineer · <a href="https://www.manifold.ai/" rel="noreferrer" class="subtle">Manifold</a>
+                    <a href="{% url 'main:work' %}#manifold">software engineer</a> · 
+                    <a href="https://www.manifold.ai/" rel="noreferrer" class="subtle">Manifold</a>
                 </div>
                 <div class="sep"></div>
                 <div class="right">2020-09 – 2022-08</div>
             </div>
             <div>
                 <div class="left">
-                    post-bac researcher ·
+                    <a href="{% url 'main:work' %}#hci-lab">post-bac researcher</a> ·
                     <a href="https://cs.wellesley.edu/~hcilab/"
                        rel="noreferrer"
                        class="subtle">Wellesley College HCI Lab</a>
@@ -52,7 +55,8 @@
             </div>
             <div>
                 <div class="left">
-                    computer science teacher · <a href="https://www.danahall.org/" rel="noreferrer" class="subtle">Dana Hall School</a>
+                    <a href="{% url 'main:work' %}#dana-hall">computer science teacher</a> · 
+                    <a href="https://www.danahall.org/" rel="noreferrer" class="subtle">Dana Hall School</a>
                 </div>
                 <div class="sep"></div>
                 <div class="right">2018-08 – 2019-06</div>
@@ -66,17 +70,30 @@
         </div>
         <div class="two-col">
             <div>
-                <div>campsites</div>
+                <div>
+                    <a href="{% url 'main:projects' %}#go-jwt-rest-api">go jwt rest api</a>
+                </div>
+                <div class="sep"></div>
+                <div class="right">a REST API for JWT authentication in Go</div>
+            </div>
+            <div>
+                <div>
+                    <a href="{% url 'main:projects' %}#campsites">campsites</a>
+                </div>
                 <div class="sep"></div>
                 <div class="right">explore public campsites across the US and Canada</div>
             </div>
             <div>
-                <div>food web simulator</div>
+                <div>
+                    <a href="{% url 'main:projects' %}#food-web-simulator">food web simulator</a>
+                </div>
                 <div class="sep"></div>
                 <div class="right">simulating relationships between organisms in a food web</div>
             </div>
             <div>
-                <div>m5stack hangman</div>
+                <div>
+                    <a href="{% url 'main:projects' %}#m5stack-hangman">m5stack hangman</a>
+                </div>
                 <div class="sep"></div>
                 <div class="right">a game of hangman on the m5stack faces keyboard module</div>
             </div>
@@ -89,22 +106,30 @@
         </div>
         <div class="two-col">
             <div>
-                <div class="left">crispee</div>
+                <div class="left">
+                    <a href="{% url 'main:research' %}#crispee">crispee</a>
+                </div>
                 <div class="sep"></div>
                 <div class="right">tangible gene editing platform for early childhood</div>
             </div>
             <div>
-                <div class="left">bactomars</div>
+                <div class="left">
+                    <a href="{% url 'main:research' %}#bactomars">bactomars</a>
+                </div>
                 <div class="sep"></div>
                 <div class="right">creative engagement with bio-design for kids</div>
             </div>
             <div>
-                <div class="left">pghci</div>
+                <div class="left">
+                    <a href="{% url 'main:research' %}#pghci">pghci</a>
+                </div>
                 <div class="sep"></div>
                 <div class="right">personal genomics for human-computer interaction</div>
             </div>
             <div>
-                <div class="left">astrochemistry</div>
+                <div class="left">
+                    <a href="{% url 'main:research' %}#astrochemistry">astrochemistry</a>
+                </div>
                 <div class="sep"></div>
                 <div class="right">radiolosys of organic molecules in deep space ices</div>
             </div>
@@ -115,7 +140,8 @@
         <div class="two-col">
             <div>
                 <div class="left">
-                    bachelors of arts, chemistry · <a href="https://www.wellesley.edu/" rel="noreferrer" class="subtle">Wellesley College</a>
+                    bachelors of arts, chemistry · 
+                    <a href="https://www.wellesley.edu/" rel="noreferrer" class="subtle">Wellesley College</a>
                 </div>
                 <div class="sep"></div>
                 <div class="right">2012-09 – 2017-01</div>

@@ -11,50 +11,101 @@
 {% endblock detail_subtitle %}
 {% block detail_content %}
     <div class="mt-12">
-        <div class="two-col">
+        <div class="two-col" id="go-jwt-rest-api">
+            <div>
+                <div>go jwt rest api</div>
+                <div class="sep"></div>
+                <div class="right">a REST API for JWT authentication in Go</div>
+            </div>
+        </div>
+        <div class="mt-2 text-xs text-accent">Go, PostgreSQL, Docker</div>
+        <div class="flex gap-12 mt-4 text-sm text-medium">
+            <a href="https://github.com/cverish/go-jwt-rest-api"
+               class="flex gap-2 items-center normal">
+                {% include "main/icons/icon-github.html" with size_classes="h-3 w-3 mt-[1px]" fill_class="fill-action" %}
+                <div>github</div>
+            </a>
+        </div>
+        <div class="explanation">
+            <p>
+                I'd wanted to learn Go for a while, and I'd never implemented authentication,
+                so this project was an amalgamation of these two desires.
+                It started as a smaller piece of a larger project, but it was beefy enough on its own
+                to break off into its own repo.
+            </p>
+            <p>
+                This API is meant to be used as a boilerplate for a larger REST API.
+                It contains routes for creating invitations, user registration, authentication,
+                and user modification/deletion.
+            </p>
+            <p>
+                Access to routes is dependent on (a) authentication status and (b) role-based authorization.
+                Authorization is handled via JWT access and refresh tokens saved within the client's cookies.
+                The cookies are set to HTTPOnly and Secure, with the Domain specified, to increase security.
+                When the access token is refreshed with the refresh token, the user's authorization is confirmed
+                before new cookies are issued. All passwords are stored as hashes in the database.
+            </p>
+            <p>
+                I haven't deployed this API; it will likely be part of a larger project.
+                I'm currently working on adding tests.
+            </p>
+        </div>
+    </div>
+    <div class="mt-12">
+        <div class="two-col" id="campsites">
             <div>
                 <div>campsites</div>
                 <div class="sep"></div>
                 <div class="right">explore public campsites across the US and Canada</div>
             </div>
         </div>
-        <div class="mt-2 text-xs text-accent">PostgreSQL, SQLAlchemy, FastAPI, React/Typescript, Docker</div>
+        <div class="mt-2 text-xs text-accent">
+            Python, React/Typescript, PostgreSQL, PostGIS, FastAPI, SQLAlchemy, GeoAlchemy 2, Docker
+        </div>
         <div class="flex gap-12 mt-4 text-sm text-medium">
-            <a href="https://campsites.veri.sh/" class="flex items-center gap-[6px]">
+            <a href="https://campsites.veri.sh/" class="flex items-center gap-[6px] normal">
                 {% include "main/icons/icon-globe.html" with size_classes="h-[14px] w-[14px] mt-[2px]" stroke_class="stroke-action" %}
                 <div>application</div>
             </a>
             <a href="https://github.com/cverish/campsites-app"
-               class="flex gap-2 items-center">
+               class="flex gap-2 items-center normal">
                 {% include "main/icons/icon-github.html" with size_classes="h-3 w-3 mt-[1px]" fill_class="fill-action" %}
                 <div>github</div>
             </a>
         </div>
-        <div class="mt-4 space-y-2 text-sm text-body2">
+        <div class="explanation">
             <p>
                 I found a dataset of 13,000+ free campsites on
                 <a href="https://uscampgrounds.info/" rel="noreferrer" class="subtle">USCampgrounds.info</a>
-                (major thanks to Tom Hillegass, the site owner) and decided to build an application that allows
-                users to filter campsites and explore on a map.
+                (major thanks to Tom Hillegass, the site owner)
+                and decided to build an application that allows users to filter campsites and explore on a map.
             </p>
             <p>
-                Currently, the application consists of a PostgreSQL database (with a sqlalchemy ORM), a REST API using the python
-                library FastAPI that allows for server-side filtering/sorting/pagination, and a React/TypeScript frontend with a
-                filterable list view. The repo contains a Docker setup for running the database, API, and frontend locally.
+                Currently, the application consists of a PostgreSQL database (with a sqlalchemy ORM),
+                a REST API using the python library FastAPI that allows for server-side filtering/sorting/pagination,
+                and a React/TypeScript frontend with a filterable list view.
+                The repo contains a Docker setup for running the database, API, and frontend locally.
             </p>
             <p>
-                I've completed some really cool work on adding a Places functionality to the application. It's currently not included
-                in the frontend, but can be accessed directly in the API <a href="https://api.veri.sh/docs" class="subtle">here</a>.
-                I downloaded all of the geographical names data for the US and Canada (which is an unbelievable amount of data) and filtered it down to
-                major places of interest, such as cities, lakes, and mountains. I then added PostGIS to the database and updated the campsites data
-                to include a new Point column with its coordinates. The Places API supports search by string or location as well as search by
-                distance from another point. The Campsites API also supports searching by proximity to a given point. This will support a more
-                intuitive search functionality for finding campsites as well as the ability to plot and cluster campsites on a map.
+                I've completed some really cool work on adding a Places functionality to the application.
+                It's currently not included in the frontend, but can be accessed directly in the API
+                <a href="https://api.veri.sh/docs" class="subtle">here</a>.
+                I downloaded all of the geographical names data for the US and Canada
+                (which is an unbelievable amount of data)
+                and filtered it down to major places of interest, such as cities, lakes, and mountains.
+                I then added PostGIS to the database and updated the campsites data
+                to include a new Point column with its coordinates.
+            </p>
+            <p>
+                The Places API supports search by string or location as well as search by distance from another point.
+                The Campsites API also supports searching by proximity to a given point.
+                This will support a more intuitive search functionality for finding campsites
+                as well as the ability to plot and cluster campsites on a map.
             </p>
         </div>
     </div>
     <div class="mt-12">
-        <div class="two-col">
+        <div class="two-col" id="food-web-simulator">
             <div>
                 <div>food web simulator</div>
                 <div class="sep"></div>
@@ -64,32 +115,36 @@
         <div class="mt-2 text-xs text-accent">React/JS</div>
         <div class="flex gap-12 mt-4 text-sm text-medium">
             <a href="https://foodweb.veri.sh/simulator"
-               class="flex items-center gap-[6px]">
+               class="flex items-center gap-[6px] normal">
                 {% include "main/icons/icon-globe.html" with size_classes="h-[14px] w-[14px]  mt-[2px]" stroke_class="stroke-action" %}
                 <div>application</div>
             </a>
             <a href="https://github.com/cverish/food-web-simulator"
-               class="flex gap-2 items-center">
+               class="flex gap-2 items-center normal">
                 {% include "main/icons/icon-github.html" with size_classes="h-3 w-3 mt-[1px]" fill_class="fill-action" %}
                 <div>github</div>
             </a>
         </div>
-        <div class="mt-4 space-y-2 text-sm text-body2">
+        <div class="explanation">
             <p>
-                Developed by request in October 2021. A middle school science teacher needed a replacement for a Flash app she had used to
-                simulate predator-prey relationships in ecosystems. She wanted a website that would have two dropdowns, one showing predators
-                and another showing prey, and feedback about the choice.
+                Developed by request in October 2021.
+                A middle school science teacher needed a replacement for a Flash app she had used
+                to simulate predator-prey relationships in ecosystems.
+                She wanted a website that would have two dropdowns,
+                one showing predators and another showing prey, and feedback about the choice.
             </p>
             <p>
-                I would say this project is most interesting for its management and validation of JSON stored locally, as well as upload and
-                download capabilities. I also wanted to practice using Material UI v5 as I've only worked with v4. On the shortlist of
-                feature-adds is a user interface for adding data (instead of forcing the user to work directly with JSON). I would like to
-                add a simple backend to this eventually.
+                I would say this project is most interesting for its management and validation of JSON stored locally,
+                as well as upload and download capabilities.
+                I also wanted to practice using Material UI v5 as I'd only worked with v4.
+                On the shortlist of feature-adds is a user interface for adding data
+                (instead of forcing the user to work directly with JSON).
+                I would like to add a simple backend to this eventually (I mean, probably won't happen, but it'd be nice).
             </p>
         </div>
     </div>
     <div class="mt-12">
-        <div class="two-col">
+        <div class="two-col" id="m5stack-hangman">
             <div>
                 <div>m5stack hangman</div>
                 <div class="sep"></div>
@@ -99,25 +154,27 @@
         <div class="mt-2 text-xs text-accent">C++/Arduino, M5Stack (ESP32)</div>
         <div class="flex gap-12 mt-4 text-sm text-medium">
             <a href="https://github.com/cverish/M5Stack-hangman"
-               class="flex gap-2 items-center">
+               class="flex gap-2 items-center normal">
                 {% include "main/icons/icon-github.html" with size_classes="h-3 w-3 mt-[1px]" fill_class="fill-action" %}
                 <div>github</div>
             </a>
         </div>
-        <div class="mt-4 space-y-2 text-sm text-body2">
+        <div class="explanation">
             <p>
-                I received an M5Stack as a gift and wanted to find a nice project that would combine the Faces modules, button presses,
-                using the SD card, and drawing graphics on the screen. I decided to implement a hangman game that would pull from a
-                list of random words and show feedback on which letters had been correct and incorrect, as well as show a hangman which
-                slowly fills up as the player guesses incorrect letters.
+                I received an M5Stack as a gift and wanted to find a nice project that would combine the Faces modules,
+                button presses, using the SD card, and drawing graphics on the screen.
+                I decided to implement a hangman game that would pull from a list of random words
+                and show feedback on which letters had been correct and incorrect,
+                as well as show a hangman which slowly fills up as the player guesses incorrect letters.
             </p>
             <p>
-                I used this as an opportunity to practice splitting a one-file monster into multiple, organized files. I'd worked with
-                Arduino extensively in the HCI lab but had only ever put my programs into a single file (and for CRISPEE that file
-                was very, very, very long). This seemed like a good chance to think about splitting the project into three logical
-                chunks - the business logic, the graphics, and the SD card reader. Code exists for a version that uses the
-                Merriam-Webster API to fetch the definition of the secret word, as a hint for the player, but this was not
-                completed to the point of being ready for publication.
+                I used this as an opportunity to practice splitting a one-file monster into multiple, organized files.
+                I'd worked with Arduino extensively in the HCI lab but had only ever put my programs into a single file
+                (and for <a class="subtle" href="{% url 'main:research' %}#crispee">CRISPEE</a> that file was very, very, very long).
+                This seemed like a good chance to think about splitting the project into three logical chunks --
+                the business logic, the graphics, and the SD card reader.
+                Code exists for a version that uses the Merriam-Webster API to fetch the definition of the secret word,
+                as a hint for the player, but this was not completed to the point of being ready for publication.
             </p>
         </div>
     </div>
