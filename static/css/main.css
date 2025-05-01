@@ -9,6 +9,12 @@ html {
   @screen sm {
     font-size: 16px;
   }
+  font-family: "Funnel Sans", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-family: "Funnel Display", "Funnel Sans",  Helvetica, Arial, sans-serif;
+  font-size: 28px;
 }
 
 a {
@@ -46,6 +52,8 @@ p {
 
     > .left {
       @apply grow-0;
+
+      font-family: "Funnel Display", "Funnel Sans", Arial, Helvetica, sans-serif;
     }
 
     > .sep {
@@ -53,7 +61,7 @@ p {
     }
 
     > .right {
-      @apply grow-0 font-light text-body2 sm:text-right;
+      @apply grow-0 font-extralight text-body2 sm:text-right;
     }
   }
 }
@@ -66,6 +74,8 @@ p {
 
     > .left {
       @apply grow-0;
+
+      font-family: "Funnel Display", "Funnel Sans", Arial, Helvetica, sans-serif;
     }
 
     > .sep {
